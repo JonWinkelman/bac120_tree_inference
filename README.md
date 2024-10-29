@@ -2,8 +2,10 @@
 
 * Dependencies
 * Python3
-### libraries:
+- `plotly`, `Bio`, `jw_utils`
+* FastTree
+* HMMER tools
+### Fasta proteomes must be in a directory together
 
-  `plotly`, `Bio`
 
 
