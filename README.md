@@ -2,7 +2,8 @@
 
 * Dependencies
 * Python3
-** libraries:
+### libraries:
+
   `plotly`, `Bio`
 
 
