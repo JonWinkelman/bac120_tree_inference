@@ -1,1 +1,3 @@
-# align_concat_proteins
+## Extract, align and concatenate bac120 proteins to infer phylogenetic tree
+
+
