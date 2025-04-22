@@ -35,7 +35,7 @@ BAC120_PROFILES = DATA / 'bac120_hmm_profiles'
 
 # Directory containing NCBI proteomes (FASTA files)
 # Each file should be named like: GCF_002362295.1.faa
-PROTEOME_DIR = DATA / 'Proteomes'
+PROTEOME_DIR = DATA / 'proteomes'
 
 # Run the pipeline
 mbt.make_bac120_tree(
