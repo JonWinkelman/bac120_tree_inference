@@ -14,5 +14,18 @@
 * if > 80% of columns have a gap, that column is removed.
 4. Use fastTree to generate unrooted maximum likelihood phylogenetic tree.
 
+Usage:  
+```
+import make_bac120_tree as mbt
+# Paths
+DATA            = Path('./data')
+# This contains the 120 HMM profiles as individual txt files.
+BAC120_PROFILES = DATA / 'bac120_hmm_profiles'
+# this is a directory containing ncbi dataset proteomes named  <assembly accession>.faa  e.g. GCF_002362295.1.faa
+PROTEOME_DIR    = DATA / 'Proteomes'
+ 
+mbt.make_bac120_tree(BAC120_PROFILES, PROTEOME_DIR, proteome_suffix='.faa', )
+```
+
 
 
