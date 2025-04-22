@@ -1,6 +1,6 @@
-## 🧬 Extract, Align, and Concatenate bac120 Proteins to Infer a Phylogenetic Tree
+## Extract, Align, and Concatenate bac120 Proteins to Infer a Phylogenetic Tree
 
-### 🔧 Dependencies
+### Dependencies
 - **Python 3**
   - [`plotly`](https://plotly.com/python/), [`Bio` (Biopython)](https://biopython.org/), [`jw_utils`](https://github.com/JonWinkelman/jw_utils)
 - **[FastTree](http://www.microbesonline.org/fasttree/)**
@@ -8,7 +8,7 @@
 
 ---
 
-### 📋 Pipeline Overview
+### Pipeline Overview
 
 1. **Extract top HMM protein hit** from each proteome, using a significance threshold.  
    - Input: A directory of proteome FASTA files (`<assembly_accession>.faa`)
@@ -21,7 +21,7 @@
 
 ---
 
-### 🚀 Usage
+### Usage
 
 ```python
 import make_bac120_tree as mbt
