@@ -1,31 +1,51 @@
-## Extract, align and concatenate bac120 proteins to infer phylogenetic tree
+## 🧬 Extract, Align, and Concatenate bac120 Proteins to Infer a Phylogenetic Tree
 
-* Dependencies
-* Python3
-- `plotly`, `Bio`, `jw_utils`
-* FastTree
-* HMMER tools
-1. Extract top HMM protein hit from each proteome if above threshold.
-- Fasta proteomes must be in a directory together
-2. Align each group of HMM-extracted proteins with the HMM profile used to extract them
-3. Concatenate all proteins extracted from each genome into one long AA sequence.
-* some filtering done.
-* if all AAs in a column are identical, that column is removed
-* if > 80% of columns have a gap, that column is removed.
-4. Use fastTree to generate unrooted maximum likelihood phylogenetic tree.
+### 🔧 Dependencies
+- **Python 3**
+  - [`plotly`](https://plotly.com/python/), [`Bio` (Biopython)](https://biopython.org/), [`jw_utils`](https://github.com/YOUR-USERNAME/jw_utils) *(replace with actual link if public)*
+- **[FastTree](http://www.microbesonline.org/fasttree/)**
+- **[HMMER](http://hmmer.org/)**
 
-Usage:  
-```
+---
+
+### 📋 Pipeline Overview
+
+1. **Extract top HMM protein hit** from each proteome, using a significance threshold.  
+   - Input: A directory of proteome FASTA files (`<assembly_accession>.faa`)
+2. **Align each group of proteins** to the HMM profile used for extraction.
+3. **Concatenate all extracted proteins** for each genome into a single amino acid sequence.
+   - Columns are filtered:
+     - Columns where all amino acids are identical are removed.
+     - Columns with >80% gaps are also removed.
+4. **Infer a phylogenetic tree** using FastTree (maximum likelihood, unrooted).
+
+---
+
+### 🚀 Usage
+
+```python
 import make_bac120_tree as mbt
+from pathlib import Path
+
 # Paths
-DATA            = Path('./data')
-# This contains the 120 HMM profiles as individual txt files.
+DATA = Path('./data')
+
+# Directory containing 120 individual HMM profile files (.txt format)
 BAC120_PROFILES = DATA / 'bac120_hmm_profiles'
-# this is a directory containing ncbi dataset proteomes named  <assembly accession>.faa  e.g. GCF_002362295.1.faa
-PROTEOME_DIR    = DATA / 'Proteomes'
- 
-mbt.make_bac120_tree(BAC120_PROFILES, PROTEOME_DIR, proteome_suffix='.faa', )
+
+# Directory containing NCBI proteomes (FASTA files)
+# Each file should be named like: GCF_002362295.1.faa
+PROTEOME_DIR = DATA / 'Proteomes'
+
+# Run the pipeline
+mbt.make_bac120_tree(
+    BAC120_PROFILES,
+    PROTEOME_DIR,
+    proteome_suffix='.faa'
+)
 ```
+
+
 
 
 
