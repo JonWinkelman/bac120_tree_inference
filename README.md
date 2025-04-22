@@ -2,7 +2,7 @@
 
 ### 🔧 Dependencies
 - **Python 3**
-  - [`plotly`](https://plotly.com/python/), [`Bio` (Biopython)](https://biopython.org/), [`jw_utils`](https://github.com/YOUR-USERNAME/jw_utils) *(replace with actual link if public)*
+  - [`plotly`](https://plotly.com/python/), [`Bio` (Biopython)](https://biopython.org/), [`jw_utils`](https://github.com/JonWinkelman/jw_utils)
 - **[FastTree](http://www.microbesonline.org/fasttree/)**
 - **[HMMER](http://hmmer.org/)**
 
